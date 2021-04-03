@@ -2,8 +2,16 @@ using UnityEngine;
 
 
 namespace Paws { 
-    public class TouchSelection : MonoBehaviour
+    public class TouchSelection : MemoTools.SingletonMonoBehaviour<TouchSelection>
     {
+        public GameObject Selected { get; private set; }
+        protected override bool DestroyOnLoad { get => false; }
+
+        protected override void InitAwake()
+        {
+            
+        }
+
         private void Update()
         {
             if (InputController.Instance.OnTouchEnded)
@@ -12,9 +20,16 @@ namespace Paws {
                 Ray ray = Camera.main.ScreenPointToRay(touchPosition);
                 RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
 
-                if (!hit) return; 
+                if (!hit)
+                {
+                    Selected = null;
+                    return;
+                }
 
-                Debug.Log($"Select: {hit.transform.name}");
+                Selected = hit.transform.gameObject;
+            } else
+            {
+                Selected = null;
             }
         }
     }
