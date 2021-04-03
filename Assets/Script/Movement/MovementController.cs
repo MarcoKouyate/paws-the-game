@@ -25,7 +25,6 @@ namespace Paws {
 
         private void FixedUpdate()
         {
-            Debug.Log(_moveDirection);
             _rigidbody.velocity = _moveDirection * 100 * Time.fixedDeltaTime * _moveSpeed;
         }
         #endregion
