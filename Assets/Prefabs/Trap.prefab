@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4869508649595387264}
   - component: {fileID: 5228970632780723911}
   - component: {fileID: -380724717438629110}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4558594583054714559}
   - component: {fileID: 748054248421522488}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trap Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
