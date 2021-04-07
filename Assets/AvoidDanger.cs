@@ -8,17 +8,38 @@ namespace Paws {
         [SerializeField] private MovementController _movement;
 
 
-        public void Update()
+        private void Awake()
+        {
+            _transform = transform;
+        }
+
+        private void Update()
         {
             if (_dangerChecker.IsDetectingDanger)
             {
-                Vector2 dangerPosition = _dangerChecker.Dangers[0].transform.position;
-                Vector2 directionToDanger = ((Vector2)transform.position - (Vector2)dangerPosition).normalized;
-                Vector2 directionToMove = directionToDanger;
-                _movement.Move(directionToMove);
-
+                Vector2 directionToDanger = GetDangerEpicenter();
+                _movement.Move(directionToDanger.normalized);
             }
         }
+
+        private Vector2 GetDangerEpicenter()
+        {
+            Vector2 epicenter = Vector2.zero;
+
+            foreach(GameObject danger in _dangerChecker.Dangers)
+            {
+                epicenter += GetDirectionToDanger(danger.transform.position);
+            }
+
+            return epicenter;
+        }
+
+        private Vector2 GetDirectionToDanger(Vector2 dangerPosition)
+        {
+            return (Vector2)_transform.position - dangerPosition;
+        }
+
+        private Transform _transform;
 
     }
 }
