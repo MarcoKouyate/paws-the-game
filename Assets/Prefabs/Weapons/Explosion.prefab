@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 607928219454477373}
   - component: {fileID: 607928219454477372}
   - component: {fileID: -8468822162076344882}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8591a350611a1284f9be79beae4c42d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 0
+  _damage: 1
   _protectFromSpawnContact: 0
   _destroyOnImpact: 0
   _contactFilter:
@@ -125,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 607928219504948988}
   - component: {fileID: 607928219504948989}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Explosion Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

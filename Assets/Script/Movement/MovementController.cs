@@ -26,6 +26,7 @@ namespace Paws {
         private void FixedUpdate()
         {
             _rigidbody.velocity = _moveDirection * 100 * Time.fixedDeltaTime * _moveSpeed;
+            _moveDirection = Vector2.zero;
         }
         #endregion
 
