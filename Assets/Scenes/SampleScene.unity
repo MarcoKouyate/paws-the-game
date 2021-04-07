@@ -213,6 +213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2225787577238749308, guid: 05656ff77a4d0234696adbbb8bea1161, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2225787577238749309, guid: 05656ff77a4d0234696adbbb8bea1161, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1043,7 +1047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canon: {fileID: 1816638500}
-  _interval: 1
+  _interval: 0.2
 --- !u!4 &1591497056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 108583175734822560, guid: b3bf87c960af1ef4689e1185f6c3fa8e, type: 3}
@@ -1054,17 +1058,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8788848176965209406, guid: 165bcefb45db5df498d45614522dbbb9, type: 3}
   m_PrefabInstance: {fileID: 951668888}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1816638499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3438844678789900580, guid: aa45e5b75266e4f43a01e2720f043a50, type: 3}
+  m_PrefabInstance: {fileID: 958352851}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1816638500 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2182861761749833040, guid: aa45e5b75266e4f43a01e2720f043a50, type: 3}
   m_PrefabInstance: {fileID: 958352851}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1816638499}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c387b01f6bc53b349861dee2dc62cf43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1816638502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816638499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96562b4de48bac24a99d77efa3706638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _instantRotation: 0
+  _rotationSpeed: 1
 --- !u!1 &2021191810
 GameObject:
   m_ObjectHideFlags: 0
