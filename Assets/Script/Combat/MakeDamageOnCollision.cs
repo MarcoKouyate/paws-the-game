@@ -3,57 +3,35 @@ using UnityEngine;
 
 
 namespace Paws { 
-    [RequireComponent(typeof(Collider2D))]
+    [RequireComponent(typeof(CollisionImmunity))]
     public class MakeDamageOnCollision : MonoBehaviour
     {
         #region Show In Inspector
         [SerializeField] private int _damage;
-        [Tooltip("Check this if it shouldn't collide with colliders overlapping when spawned")]
-        [SerializeField] private bool _protectFromSpawnContact;
         [SerializeField] private bool _destroyOnImpact;
-        [SerializeField] private ContactFilter2D _contactFilter;
         #endregion
 
 
         #region Unity Cycle
+
         private void Awake()
         {
-            if (_protectFromSpawnContact) RegisterSpawnContacts();
+            _collisionImmunity = GetComponent<CollisionImmunity>();
         }
-
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (_protectFromSpawnContact && IsImmuneToCollision(other)) return;
+            if (_collisionImmunity.IsImmuneToCollision(other) || _collisionImmunity.IsImmuneToCollision(other.gameObject.layer)) return;
 
+            //Debug.Log($"Hit: {other.name}");
             Damage(other);
-
             if(_destroyOnImpact) Destroy(gameObject);
         }
 
-        private void OnTriggerExit2D(Collider2D other)
-        {
-            if(_protectFromSpawnContact && IsImmuneToCollision(other))
-            {
-                _collidersImmuneToCollision.Remove(other);
-            }
-        }
         #endregion
 
 
-        #region Private Variables
-        private void RegisterSpawnContacts()
-        {
-            Collider2D collider = GetComponent<Collider2D>();
-            Collider2D[] collidersTouchedFromStart = new Collider2D[10];
-            collider.OverlapCollider(_contactFilter, collidersTouchedFromStart);
-            _collidersImmuneToCollision = new List<Collider2D>(collidersTouchedFromStart);
-        }
-
-        private bool IsImmuneToCollision(Collider2D other)
-        {
-            return _collidersImmuneToCollision.Contains(other);
-        }
+        #region Private Methods
 
         private void Damage(Collider2D other)
         {
@@ -65,9 +43,6 @@ namespace Paws {
         }
         #endregion
 
-
-        #region Private Variables
-        private List<Collider2D> _collidersImmuneToCollision;
-        #endregion
+        private CollisionImmunity _collisionImmunity;
     }
 }
