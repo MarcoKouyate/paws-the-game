@@ -12,9 +12,6 @@ namespace Paws {
         {
             if (loseCondition.IsCompleted)  {
                 Debug.Log("Lose");
-            } else
-            {
-                Debug.Log("Not Lose");
             }
             
             if (winCondition.IsCompleted)
