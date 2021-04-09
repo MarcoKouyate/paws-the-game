@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3986157134182334292}
   - component: {fileID: 3986157134182334293}
   - component: {fileID: 3986157134182334294}
-  m_Layer: 0
+  - component: {fileID: 3905140187369394361}
+  m_Layer: 11
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,22 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
-  _protectFromSpawnContact: 1
   _destroyOnImpact: 1
-  _contactFilter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
 --- !u!114 &3986157134182334294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +110,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 1
+--- !u!114 &3905140187369394361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986157134182333611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd7a05bd72976b4ab558ef1f91bda3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  immuneObjects: []
+  collidedObjects: []
+  _contactFilter:
+    useTriggers: 1
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  _immuneLayers:
+    serializedVersion: 2
+    m_Bits: 4096
+  _protectFromSpawnContact: 1
+  _maxSpawnContact: 10
 --- !u!1 &3986157134948967133
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3986157134948967132}
   - component: {fileID: 3986157134948967135}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bullet Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

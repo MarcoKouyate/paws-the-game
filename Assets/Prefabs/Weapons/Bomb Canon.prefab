@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 424141203752900637}
   - component: {fileID: 2182861761749833040}
   m_Layer: 0
-  m_Name: Canon
+  m_Name: Bomb Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,4 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c387b01f6bc53b349861dee2dc62cf43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletPrefab: {fileID: 3986157134182333611, guid: 235fcfda21cdb5f44930fc6395908089, type: 3}
+  _bulletPrefab: {fileID: 1719935424257077124, guid: 8d459f072fa2f7a4ea941a2a63d0b73b, type: 3}
