@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 424141203752900637}
   - component: {fileID: 2182861761749833040}
   m_Layer: 0
-  m_Name: Canon
+  m_Name: Bullet Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
