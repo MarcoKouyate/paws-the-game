@@ -15,6 +15,11 @@ namespace Paws {
         {
             get => current > 0;
         }
+
+        public int Current
+        {
+            get => current;
+        }
         #endregion
 
         #region Public Methods
