@@ -12,6 +12,7 @@ namespace Paws {
             _movement = GetComponent<MovementController>();
             _health = GetComponent<Health>();
             _swapper = GetComponent<Swapper>();
+            _health.OnDeath += OnDie;
         }
 
         public void Move(Vector2 direction)
@@ -19,6 +20,11 @@ namespace Paws {
             if (!_health.IsAlive) return;
 
             _movement.Move(direction);
+        }
+
+        private void OnDie(object sender, System.EventArgs e)
+        {
+            _swapper.enabled = false;
         }
 
         private MovementController _movement;
