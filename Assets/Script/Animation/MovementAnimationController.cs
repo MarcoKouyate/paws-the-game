@@ -19,6 +19,7 @@ namespace Paws {
         {
             _direction = direction;
             if (direction.x * transform.right.x < 0) Flip();
+            TriggerAnimation();
         }
 
         private void Flip()
@@ -33,7 +34,7 @@ namespace Paws {
             _animator = GetComponent<Animator>();
         }
 
-        private void Update()
+        private void TriggerAnimation()
         {
             foreach(CoordinateDirection coordinate in coordinates)
             {

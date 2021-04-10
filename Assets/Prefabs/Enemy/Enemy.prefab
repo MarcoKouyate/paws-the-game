@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 108583175734822562}
   - component: {fileID: 108583175734822565}
   - component: {fileID: 980622016}
-  - component: {fileID: 3134551775052768112}
   - component: {fileID: 980946825357125888}
   - component: {fileID: 4055278040404170212}
   - component: {fileID: -4513040792294939697}
+  - component: {fileID: 6592653975023986146}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 1
+  _animation: {fileID: 0}
 --- !u!50 &108583175734822562
 Rigidbody2D:
   serializedVersion: 4
@@ -111,18 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7da8e6addba4c64b9b22e688bfc63ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3134551775052768112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 108583175734822564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 421f3ce8353184a45a317c1682ccc00f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &980946825357125888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +156,18 @@ MonoBehaviour:
   counter: {fileID: 11400000, guid: e71ed5dc921b86d44ad012ae9d3eb78e, type: 2}
   lifetimeEvent: 2
   increment: -1
+--- !u!114 &6592653975023986146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108583175734822564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0946176664ac21f49816f0f30e1eff47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &108583176533458244
 GameObject:
   m_ObjectHideFlags: 0

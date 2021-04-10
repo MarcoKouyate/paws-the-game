@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Paws { 
     public class PlugPlayerWithInput : MonoBehaviour
     {
-        [SerializeField] MovementController _player;
+        [SerializeField] PlayerController _player;
 
         private void Update()
         {
