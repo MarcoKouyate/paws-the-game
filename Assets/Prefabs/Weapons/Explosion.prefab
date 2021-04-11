@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 607928219454477373}
   - component: {fileID: 607928219454477372}
   - component: {fileID: -8468822162076344882}
+  - component: {fileID: 7322639962565605967}
+  - component: {fileID: 5631662907501659905}
   m_Layer: 11
   m_Name: Explosion
   m_TagString: Untagged
@@ -99,8 +101,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
-  _protectFromSpawnContact: 0
   _destroyOnImpact: 0
+--- !u!114 &7322639962565605967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607928219454477363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd7a05bd72976b4ab558ef1f91bda3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  immuneObjects: []
+  collidedObjects: []
   _contactFilter:
     useTriggers: 0
     useLayerMask: 0
@@ -115,6 +130,25 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  _immuneLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  _protectFromSpawnContact: 0
+  _maxSpawnContact: 0
+--- !u!114 &5631662907501659905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607928219454477363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a91d54b66f352647b6383a627a18d0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetimeEvent: 0
+  _sfx: {fileID: 11400000, guid: 0ee01a9d7ec6dfe479a0e6376642919a, type: 2}
 --- !u!1 &607928219504948979
 GameObject:
   m_ObjectHideFlags: 0
