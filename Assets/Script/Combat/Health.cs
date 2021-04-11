@@ -1,8 +1,7 @@
 using UnityEngine;
-
+using System;
 
 namespace Paws { 
-    [RequireComponent(typeof(Death))]
     public class Health : MonoBehaviour
     {
         #region Show In Inspector
@@ -11,6 +10,10 @@ namespace Paws {
         #endregion
 
         #region Properties
+
+        public event EventHandler OnDeath;
+        public event EventHandler OnDamage;
+
         public bool IsAlive
         {
             get => current > 0;
@@ -26,6 +29,7 @@ namespace Paws {
         public void ResetHealth()
         {
             current = max;
+            _wasAlive = IsAlive;
         }
 
         public void Heal(int amount)
@@ -38,24 +42,29 @@ namespace Paws {
         {
             current -= amount;
             if (current < 0) current = 0;
+            OnDamage?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void Die()
+        {
+            _wasAlive = false;
+            OnDeath?.Invoke(this, EventArgs.Empty);
         }
         #endregion
 
         #region Unity Cycle
         private void Awake()
         {
-            _death = GetComponent<Death>();
             ResetHealth();
         }
 
         private void Update()
         {
-            if(!IsAlive) _death.Die();
+            if (_wasAlive && !IsAlive) Die();
+            _wasAlive = IsAlive;
         }
         #endregion
 
-        #region Private Variables
-        private Death _death;
-        #endregion
+        private bool _wasAlive;
     }
 }

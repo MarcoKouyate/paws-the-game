@@ -13,29 +13,19 @@ namespace Paws {
         private void Awake()
         {
             _nextShotTime = Time.time;
+            _timer = new MemoTools.Timer(_interval, true);
         }
 
         private void Update()
         {
-            if (isTimerExpired())
+            if (_timer.OnTimeEnd)
             {
-                ResetTimer();
                 Attack();
             }
         }
         #endregion
 
-        #region Private Methods
-        private bool isTimerExpired()
-        {
-            return Time.time > _nextShotTime;
-        }
-
-        private void ResetTimer()
-        {
-            _nextShotTime = Time.time + _interval;
-        }
-
+        #region Public Methods
         private void Attack()
         {
             if (!_canon) return;
@@ -45,6 +35,7 @@ namespace Paws {
 
         #region Private Variables
         private float _nextShotTime;
+        private MemoTools.Timer _timer;
         #endregion
     }
 }

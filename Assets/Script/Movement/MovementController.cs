@@ -7,12 +7,14 @@ namespace Paws {
     {
         #region Show In Inspector
         [SerializeField] private float _moveSpeed;
+        [SerializeField] private MovementAnimationController _animation;
         #endregion
 
         #region Public Methods
         public void Move(Vector2 direction)
         {
             _moveDirection = direction;
+            if(_animation) _animation.Move(direction);
         }
         #endregion
 
