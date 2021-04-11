@@ -19,7 +19,5 @@ namespace Paws {
         {
             Destroy(gameObject);
         }
-
-        private Transform _transform;
     }
 }
