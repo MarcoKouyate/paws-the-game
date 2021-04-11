@@ -976,7 +976,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d07efcf61ad154c8b0e09e1ce49bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dontDestroyOnLoad: 0
 --- !u!82 &1068492502
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1523,7 +1522,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2021191811
 Transform:
   m_ObjectHideFlags: 0
