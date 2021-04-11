@@ -12,6 +12,7 @@ namespace Paws {
         #region Properties
 
         public event EventHandler OnDeath;
+        public event EventHandler OnDamage;
 
         public bool IsAlive
         {
@@ -40,6 +41,7 @@ namespace Paws {
         {
             current -= amount;
             if (current < 0) current = 0;
+            OnDamage?.Invoke(this, EventArgs.Empty);
         }
 
         public void Die()
