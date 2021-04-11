@@ -29,6 +29,7 @@ namespace Paws {
         public void ResetHealth()
         {
             current = max;
+            _wasAlive = IsAlive;
         }
 
         public void Heal(int amount)
@@ -46,6 +47,7 @@ namespace Paws {
 
         public void Die()
         {
+            _wasAlive = false;
             OnDeath?.Invoke(this, EventArgs.Empty);
         }
         #endregion
@@ -58,8 +60,11 @@ namespace Paws {
 
         private void Update()
         {
-            if (!IsAlive) Die();
+            if (_wasAlive && !IsAlive) Die();
+            _wasAlive = IsAlive;
         }
         #endregion
+
+        private bool _wasAlive;
     }
 }
