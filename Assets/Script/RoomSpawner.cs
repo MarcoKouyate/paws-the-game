@@ -13,14 +13,16 @@ namespace Paws {
             Room room = Instantiate(roomPrefab, transform.position, transform.rotation);
             if(caller) room.Link(caller);
 
-            room.Init();
+            room.Init(_distanceFromStart);
         }
 
-        public void LinkTo(DoorSpawn door)
+        public void LinkTo(DoorSpawn door, int distanceFromStart)
         {
             caller = door;
+            _distanceFromStart = distanceFromStart + 1;
         }
 
         DoorSpawn caller;
+        int _distanceFromStart = 0;
     }
 }

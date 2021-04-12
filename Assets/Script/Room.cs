@@ -11,12 +11,14 @@ namespace Paws {
         [SerializeField] private bool random;
         [SerializeField] private float offset;
         [SerializeField] private RoomSpawner neighbourPrefab;
-        [SerializeField] MemoTools.ScriptableInt remainingRoom;
+        [SerializeField] private GridData gridData;
+        public int _distanceFromStart;
 
 
         private void Awake()
         {
             _availableDoors = new List<DoorSpawn>(nextDoors);
+
         }
         
         public void Link(DoorSpawn other)
@@ -27,22 +29,22 @@ namespace Paws {
             door.SetOffSet(-other.Offset);
         }
 
-        public void Init()
+        public void Init(int distanceFromStart)
         {
             int doorMax = (random) ? Random.Range(1, _availableDoors.Count) : _availableDoors.Count;
             if (doorMax > 2) doorMax = 2;
             int doorCount = 0;
+            _distanceFromStart = distanceFromStart;
 
-            while (_availableDoors.Count > 0 && remainingRoom.value > 0 && doorCount <= doorMax)
+            while (_availableDoors.Count > 0 && gridData.info.remainingRoomCount > 0 && doorCount <= doorMax)
             {
-                    Debug.Log(doorCount);
                     int random = Random.Range(0, _availableDoors.Count);
                     DoorSpawn door = _availableDoors[random];
                     _availableDoors.Remove(door);
-                    remainingRoom.value--;
+                    gridData.info.remainingRoomCount--;
                     doorCount++;
                     RoomSpawner neighbour = Instantiate(neighbourPrefab, GetNextRoomPosition(door), Quaternion.identity);
-                    neighbour.LinkTo(door);
+                    neighbour.LinkTo(door, distanceFromStart);
             }
 
             //Clear
