@@ -8,7 +8,7 @@ namespace Paws {
     {
         #region Show In Inspector
         [SerializeField] private int _damage;
-        [SerializeField] private bool _destroyOnImpact;
+        [SerializeField] private bool _disableOnImpact;
         #endregion
 
 
@@ -24,7 +24,7 @@ namespace Paws {
             if (_collisionImmunity.IsImmuneToCollision(other) || _collisionImmunity.IsImmuneToCollision(other.gameObject.layer)) return;
 
             Damage(other);
-            if(_destroyOnImpact) Destroy(gameObject);
+            if(_disableOnImpact) gameObject.SetActive(false);
         }
 
         #endregion

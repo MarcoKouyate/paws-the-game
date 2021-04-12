@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 1235886267921286693}
   - component: {fileID: -6815074589433578069}
   - component: {fileID: -8401676193704523458}
+  - component: {fileID: -7753797402038071556}
   m_Layer: 11
   m_Name: Missile
   m_TagString: Bullet
@@ -226,8 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29abf9978eadcbb47b9e76c5f0356c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetimeEvent: 2
-  _prefab: {fileID: 607928219454477363, guid: 28c900a9ef82b2b4f8e4ac1aaa3ea88c, type: 3}
+  lifetimeEvent: 4
+  _pool: {fileID: -7753797402038071556}
   _spawn: {fileID: 617464720966943261}
 --- !u!114 &7136063151222687434
 MonoBehaviour:
@@ -315,7 +316,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 0
-  _destroyOnImpact: 1
+  _disableOnImpact: 1
+--- !u!114 &-7753797402038071556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719935424257077124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487a6430117f74e4db55df420aaf26be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 607928219454477363, guid: 28c900a9ef82b2b4f8e4ac1aaa3ea88c, type: 3}
+  _size: 5
 --- !u!1001 &5710182057121309518
 PrefabInstance:
   m_ObjectHideFlags: 0

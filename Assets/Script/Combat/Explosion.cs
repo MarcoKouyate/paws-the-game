@@ -8,7 +8,7 @@ namespace Paws {
         [SerializeField] private float _size;
         [SerializeField] private float _duration;
 
-        private void Awake()
+        private void OnEnable()
         {
             transform.DOScale(transform.localScale * _size, _duration)
                 .SetEase(Ease.OutSine)

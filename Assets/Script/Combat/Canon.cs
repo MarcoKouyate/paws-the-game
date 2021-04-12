@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Paws { 
     public class Canon : MonoBehaviour
     {
-        [SerializeField] private GameObject _bulletPrefab;
+        [SerializeField] private MemoTools.ObjectPool _objectPool;
 
         public event System.EventHandler OnShoot;
 
@@ -15,7 +15,7 @@ namespace Paws {
 
         public void Use()
         {
-            Instantiate(_bulletPrefab, _transform.position, _transform.rotation);
+            _objectPool.Take( _transform.position, _transform.rotation);
             OnShoot?.Invoke(this, System.EventArgs.Empty);
         }
 

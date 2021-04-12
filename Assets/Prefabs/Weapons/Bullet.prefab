@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3986157134182334294}
   - component: {fileID: 3905140187369394361}
   - component: {fileID: -2062329406689673391}
+  - component: {fileID: 7508700057745906387}
   m_Layer: 11
   m_Name: Bullet
   m_TagString: Bullet
@@ -98,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
-  _destroyOnImpact: 1
+  _disableOnImpact: 1
 --- !u!114 &3986157134182334294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,8 +159,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetimeEvent: 4
-  _prefab: {fileID: 3700586643888775869, guid: 3e53d9540b1dd044fb47a10c4302b107, type: 3}
+  _pool: {fileID: 7508700057745906387}
   _spawn: {fileID: 3986157134182333610}
+--- !u!114 &7508700057745906387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986157134182333611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487a6430117f74e4db55df420aaf26be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 3700586643888775869, guid: 3e53d9540b1dd044fb47a10c4302b107, type: 3}
+  _size: 5
 --- !u!1 &3986157134948967133
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 424141203752900637}
   - component: {fileID: 2182861761749833040}
+  - component: {fileID: 2803804455073652832}
   m_Layer: 0
   m_Name: Bullet Canon
   m_TagString: Untagged
@@ -43,4 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c387b01f6bc53b349861dee2dc62cf43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletPrefab: {fileID: 3986157134182333611, guid: 235fcfda21cdb5f44930fc6395908089, type: 3}
+  _objectPool: {fileID: 2803804455073652832}
+--- !u!114 &2803804455073652832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3438844678789900580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487a6430117f74e4db55df420aaf26be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 3986157134182333611, guid: 235fcfda21cdb5f44930fc6395908089, type: 3}
+  _size: 10
