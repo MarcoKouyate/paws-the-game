@@ -23,7 +23,6 @@ namespace Paws {
         {
             if (_collisionImmunity.IsImmuneToCollision(other) || _collisionImmunity.IsImmuneToCollision(other.gameObject.layer)) return;
 
-            //Debug.Log($"Hit: {other.name}");
             Damage(other);
             if(_destroyOnImpact) Destroy(gameObject);
         }

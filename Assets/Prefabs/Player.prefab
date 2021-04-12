@@ -5130,7 +5130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 105779f217665a64f890d37a6bd93540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interval: 0.1
+  _intervals:
+  - 0.1
   _color: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &1585417238
 MonoBehaviour:
