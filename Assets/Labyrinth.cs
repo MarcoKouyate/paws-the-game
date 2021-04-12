@@ -6,13 +6,14 @@ namespace Game {
     {
         [SerializeField] private int _count;
         [SerializeField] private MemoTools.ScriptableInt _remainingRooms;
+        [SerializeField] private int seed;
 
         private void Awake()
         {
             _remainingRooms.value = _count;
-            const int initialSeed = 1234;
+            
 
-            Random.InitState(initialSeed);
+            Random.InitState(seed);
         }
     }
 }

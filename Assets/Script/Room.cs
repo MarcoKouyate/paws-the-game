@@ -30,30 +30,34 @@ namespace Paws {
         public void Init()
         {
             int doorMax = (random) ? Random.Range(1, _availableDoors.Count) : _availableDoors.Count;
+            if (doorMax > 2) doorMax = 2;
             int doorCount = 0;
 
-            foreach (DoorSpawn door in _availableDoors)
+            while (_availableDoors.Count > 0 && remainingRoom.value > 0 && doorCount <= doorMax)
             {
-
-                if (remainingRoom.value > 0 && doorCount < doorMax)
-                {
+                    Debug.Log(doorCount);
+                    int random = Random.Range(0, _availableDoors.Count);
+                    DoorSpawn door = _availableDoors[random];
+                    _availableDoors.Remove(door);
                     remainingRoom.value--;
                     doorCount++;
                     RoomSpawner neighbour = Instantiate(neighbourPrefab, GetNextRoomPosition(door), Quaternion.identity);
                     neighbour.LinkTo(door);
-                }
-                else
-                {
-                    Destroy(door.gameObject);
-                }
-
             }
+
+            //Clear
+            foreach(DoorSpawn door in _availableDoors)
+            {
+                Destroy(door.gameObject);
+            }
+
+            _availableDoors.Clear();
         }
 
 
         private DoorSpawn GetMatchingDoor(DoorSpawn other)
         {
-            foreach (DoorSpawn door in nextDoors)
+            foreach (DoorSpawn door in _availableDoors)
             {
                 if (((other.Direction.horizontal + door.Direction.horizontal) == 0) && (((other.Direction.vertical + door.Direction.vertical) == 0)))
                 {
