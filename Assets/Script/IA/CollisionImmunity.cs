@@ -20,6 +20,12 @@ namespace Paws {
         {
             collidedObjects = new List<Collider2D>();
             immuneObjects = new List<Collider2D>();
+        }
+
+        private void OnEnable()
+        {
+            collidedObjects.Clear();
+            immuneObjects.Clear();
 
             if (_protectFromSpawnContact)
             {
