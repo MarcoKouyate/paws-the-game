@@ -57,9 +57,12 @@ TagManager:
   - name: Weapon
     uniqueID: 4188202551
     locked: 0
+  - name: Effects
+    uniqueID: 1475782615
+    locked: 0
   - name: Foreground
     uniqueID: 1489832933
     locked: 0
-  - name: Player
-    uniqueID: 1475782615
+  - name: UI
+    uniqueID: 971722675
     locked: 0
