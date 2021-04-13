@@ -4,20 +4,19 @@ using System;
 namespace Paws { 
     public class ShakeCameraOnDamage : MonoBehaviour
     {
-        [SerializeField] private MilkShake.ShakePreset _preset;
         [SerializeField] private Health _health;
+        [SerializeField] private CinemachineShaker _cameraShaker;
+        [SerializeField] private float _time;
+        [SerializeField] private float _intensity;
 
         private void Awake()
         {
-            _shaker = Camera.main.GetComponent<MilkShake.Shaker>();
             _health.OnDamage += OnDamage;
         }
 
         private void OnDamage(object sender, EventArgs e)
         {
-            _shaker.Shake(_preset);
+            _cameraShaker.Shake(_intensity, _time);
         }
-
-        private MilkShake.Shaker _shaker;
     }
 }
