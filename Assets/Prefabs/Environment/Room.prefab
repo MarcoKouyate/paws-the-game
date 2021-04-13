@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8192068926505098374}
   - component: {fileID: 8192068926505098375}
+  - component: {fileID: 5588866884311100377}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -55,6 +56,19 @@ MonoBehaviour:
   neighbourPrefab: {fileID: 7455976547608302437, guid: 245df7253cced6548b389ca8f8fd1888, type: 3}
   gridData: {fileID: 11400000, guid: b19509f5c2e218f49ad9c03acf8ff1ad, type: 2}
   _distanceFromStart: 0
+--- !u!114 &5588866884311100377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8192068926505098376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47d7360cb021bb940ae5f737fe61ad4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _preset: {fileID: 11400000, guid: 685dd047a26351d468011fa5cfcae031, type: 2}
 --- !u!1 &8192068927053651149
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +163,8 @@ GameObject:
   - component: {fileID: 491637799001942414}
   - component: {fileID: 1992490011670619334}
   - component: {fileID: 8217136946261603881}
-  m_Layer: 13
+  - component: {fileID: 372402213505337781}
+  m_Layer: 14
   m_Name: Room Size
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +179,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8192068928093481732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 8192068927053651148}
@@ -231,6 +246,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cameraPosition: {fileID: 11400000, guid: c2bff556eff633445abcd7a35b8a4e0f, type: 2}
+--- !u!114 &372402213505337781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8192068928093481732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a07a1b9aa250145bc49a821c645fbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _challenge: {fileID: 5588866884311100377}
 --- !u!1 &8192068928574189288
 GameObject:
   m_ObjectHideFlags: 0
