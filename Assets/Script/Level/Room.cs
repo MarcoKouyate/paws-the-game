@@ -36,6 +36,8 @@ namespace Paws {
             int doorCount = 0;
             _distanceFromStart = distanceFromStart;
 
+            if (distanceFromStart >= gridData.info.distanceFromStart) gridData.info.distanceFromStart = distanceFromStart;
+
             while (_availableDoors.Count > 0 && gridData.info.remainingRoomCount > 0 && doorCount <= doorMax)
             {
                     int random = Random.Range(0, _availableDoors.Count);

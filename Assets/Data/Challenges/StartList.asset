@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff419eb6de706704fb63a080786cafb4, type: 3}
-  m_Name: EnemyCount
+  m_Script: {fileID: 11500000, guid: d61a85b3c6e93e54688e19c41a4a45c5, type: 3}
+  m_Name: StartList
   m_EditorClassIdentifier: 
-  value: 0
+  elements:
+  - {fileID: 7359265354561107467, guid: fffbb704ac2063148bd74bf8e7c32171, type: 3}

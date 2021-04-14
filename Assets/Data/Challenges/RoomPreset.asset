@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a69f5cfe4c5c31d4aa04bd3506dd2558, type: 3}
   m_Name: RoomPreset
   m_EditorClassIdentifier: 
+  ends: {fileID: 11400000, guid: 6264b75accbd5454f9286b393c4d293f, type: 2}
+  starts: {fileID: 11400000, guid: e1318a46c2763874aad349cf6acdb962, type: 2}
   enemies: {fileID: 11400000, guid: b8b3e49e2890c4245aa3985fb5ac18a7, type: 2}
   traps: {fileID: 11400000, guid: b8b3e49e2890c4245aa3985fb5ac18a7, type: 2}

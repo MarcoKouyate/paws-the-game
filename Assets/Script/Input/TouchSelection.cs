@@ -27,6 +27,8 @@ namespace Paws {
                 }
 
                 Selected = hit.transform.gameObject;
+
+                Debug.Log(Selected);
             } else
             {
                 Selected = null;

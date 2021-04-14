@@ -9,7 +9,12 @@ namespace Paws {
 
         private void Start()
         {
-            if(Physics2D.OverlapPoint(transform.position)) return;
+            Collider2D collider = Physics2D.OverlapPoint(transform.position);
+
+            if (collider && !collider.CompareTag("Player")) return;
+
+            Debug.Log("Spawn");
+
             Room room = Instantiate(roomPrefab, transform.position, transform.rotation);
             if(caller) room.Link(caller);
 
