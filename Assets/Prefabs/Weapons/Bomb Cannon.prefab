@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4101982258249353237
+--- !u!1 &2065185253422952861
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,36 +8,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2305038544082017412}
-  - component: {fileID: 896797094544230735}
+  - component: {fileID: 1522188068164556673}
+  - component: {fileID: 8659481282035848281}
   m_Layer: 0
-  m_Name: Canon Sprite
+  m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2305038544082017412
+--- !u!4 &1522188068164556673
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4101982258249353237}
+  m_GameObject: {fileID: 2065185253422952861}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8402376624069501204}
+  m_Father: {fileID: 3368308138422095790}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &896797094544230735
+--- !u!212 &8659481282035848281
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4101982258249353237}
+  m_GameObject: {fileID: 2065185253422952861}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -68,10 +68,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -106764745
-  m_SortingLayer: 4
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6f8af6d667cb50c4b854e50d304264f9, type: 3}
+  m_SortingLayerID: -1293508387
+  m_SortingLayer: 1
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 4101514835190376516, guid: 8c638fa0b0943264e868a06b2c562314, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,34 +82,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &594609426
+--- !u!114 &6413983260273839586
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6827699112871890989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e91179e88a7a3254d9dd48c2c4a137bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _canon: {fileID: 8012732889589935193}
-  _interval: 3
---- !u!114 &594609427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6827699112871890989}
+  m_GameObject: {fileID: 352762128273981079}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1e394b819765954b8faadba6cd01a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _condition: {fileID: 11400000, guid: bd8cad369bd99db4d989f3a57ce36d4f, type: 2}
---- !u!1001 &8176820761260538121
+--- !u!114 &6413983260273839587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352762128273981079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91179e88a7a3254d9dd48c2c4a137bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canon: {fileID: 3825646798053655267}
+  _interval: 4
+--- !u!1001 &3124504503344732083
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -167,14 +167,14 @@ PrefabInstance:
     - target: {fileID: 2803804455073652832, guid: aa45e5b75266e4f43a01e2720f043a50, type: 3}
       propertyPath: _prefab
       value: 
-      objectReference: {fileID: 1719935424257077124, guid: a8ba3e76d6323cc42918e87f601c9e26, type: 3}
+      objectReference: {fileID: 1719935424257077124, guid: 8d459f072fa2f7a4ea941a2a63d0b73b, type: 3}
     - target: {fileID: 3438844678789900580, guid: aa45e5b75266e4f43a01e2720f043a50, type: 3}
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 3438844678789900580, guid: aa45e5b75266e4f43a01e2720f043a50, type: 3}
       propertyPath: m_Name
-      value: Missile Canon Variant
+      value: Bomb Cannon
       objectReference: {fileID: 0}
     - target: {fileID: 3438844678789900580, guid: aa45e5b75266e4f43a01e2720f043a50, type: 3}
       propertyPath: m_IsActive
@@ -182,22 +182,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa45e5b75266e4f43a01e2720f043a50, type: 3}
---- !u!1 &6827699112871890989 stripped
+--- !u!1 &352762128273981079 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3438844678789900580, guid: aa45e5b75266e4f43a01e2720f043a50, type: 3}
-  m_PrefabInstance: {fileID: 8176820761260538121}
+  m_PrefabInstance: {fileID: 3124504503344732083}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &8402376624069501204 stripped
+--- !u!4 &3368308138422095790 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 424141203752900637, guid: aa45e5b75266e4f43a01e2720f043a50, type: 3}
-  m_PrefabInstance: {fileID: 8176820761260538121}
+  m_PrefabInstance: {fileID: 3124504503344732083}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8012732889589935193 stripped
+--- !u!114 &3825646798053655267 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2182861761749833040, guid: aa45e5b75266e4f43a01e2720f043a50, type: 3}
-  m_PrefabInstance: {fileID: 8176820761260538121}
+  m_PrefabInstance: {fileID: 3124504503344732083}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6827699112871890989}
+  m_GameObject: {fileID: 352762128273981079}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c387b01f6bc53b349861dee2dc62cf43, type: 3}

@@ -27,5 +27,11 @@ namespace Paws {
             GameObject end = ends.GetRandomElement();
             return end;
         }
+
+        public GameObject GetRandomTrap()
+        {
+            GameObject trap = traps.GetRandomElement();
+            return trap;
+        }
     }
 }

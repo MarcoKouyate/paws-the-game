@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3268470993226094260}
   - component: {fileID: 3268470993226094267}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BlinkingTrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,9 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _intervals:
+  - 2
   - 1
   _objectToToggle: {fileID: 3561922246130855733}
-  _activeIsNormal: 1
+  _activeIsNormal: 0
 --- !u!1 &3754082243825579047
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +154,10 @@ PrefabInstance:
     - target: {fileID: 2032685169228699604, guid: 3be41f1fe33750d4dac4719afbcb4303, type: 3}
       propertyPath: m_Name
       value: Danger Zone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2032685169228699604, guid: 3be41f1fe33750d4dac4719afbcb4303, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6212402045768768743, guid: 3be41f1fe33750d4dac4719afbcb4303, type: 3}
       propertyPath: m_RootOrder

@@ -37,6 +37,11 @@ namespace Paws
                     break;
                 case RoomType.Enemy:
                     prefab = _preset.GetRandomEnemy();
+                    float random = Random.Range(0f, 1f);
+                    if(random > 0.5)
+                    {
+                        Instantiate(_preset.GetRandomTrap(), transform.position, transform.rotation);
+                    }
                     break;
                 case RoomType.End:
                     prefab = _preset.GetRandomEnd();
