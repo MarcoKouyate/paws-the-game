@@ -6,6 +6,7 @@ namespace Paws {
     {
         [SerializeField] private Transform _destination;
 
+
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (_destination) other.transform.position = _destination.position;
