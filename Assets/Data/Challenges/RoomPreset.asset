@@ -15,4 +15,4 @@ MonoBehaviour:
   ends: {fileID: 11400000, guid: 6264b75accbd5454f9286b393c4d293f, type: 2}
   starts: {fileID: 11400000, guid: e1318a46c2763874aad349cf6acdb962, type: 2}
   enemies: {fileID: 11400000, guid: b8b3e49e2890c4245aa3985fb5ac18a7, type: 2}
-  traps: {fileID: 11400000, guid: b8b3e49e2890c4245aa3985fb5ac18a7, type: 2}
+  traps: {fileID: 11400000, guid: 2a42badc2fbf472489fad5839481caf1, type: 2}
