@@ -20,8 +20,8 @@ namespace Paws
             }
             else if (_room._distanceFromStart >= _grid.info.distanceFromStart && _grid.info.remainingGoalCount > 0)
             {
-                _grid.info.remainingGoalCount--;
                 _type = RoomType.End;
+                _grid.info.remainingGoalCount--;
             }
             else
             {

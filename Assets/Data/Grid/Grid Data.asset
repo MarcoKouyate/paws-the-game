@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd1df6a73226e345bf293ec68e6d87d, type: 3}
   m_Name: Grid Data
   m_EditorClassIdentifier: 
-  seed: 1
+  randomSeed: 1
+  seed: 81
   roomCount: 15
   goalCount: 2

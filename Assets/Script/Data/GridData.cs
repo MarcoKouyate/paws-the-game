@@ -12,6 +12,7 @@ namespace Paws {
     [CreateAssetMenu(menuName = "PAWS/GridGeneration/GridData", fileName = "Grid Data")]
     public class GridData : ScriptableObject
     {
+        public bool randomSeed;
         public int seed;
         public int roomCount;
         public int goalCount;
@@ -22,6 +23,10 @@ namespace Paws {
             info.distanceFromStart = 0;
             info.remainingGoalCount = goalCount;
             info.remainingRoomCount = roomCount;
+            if(randomSeed)
+            {
+                seed = Random.Range(0, 100);
+            }
             Random.InitState(seed);
         }
     }
