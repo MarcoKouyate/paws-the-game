@@ -18,7 +18,6 @@ namespace Paws {
         private void Awake()
         {
             _availableDoors = new List<DoorSpawn>(nextDoors);
-
         }
         
         public void Link(DoorSpawn other)
