@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 4869508649595387264}
   - component: {fileID: 5228970632780723911}
   - component: {fileID: -380724717438629110}
+  - component: {fileID: 8077019371550083102}
   m_Layer: 6
-  m_Name: Trap
+  m_Name: Danger Zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,8 +95,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
-  _protectFromSpawnContact: 0
-  _destroyOnImpact: 0
+  _disableOnImpact: 0
+--- !u!114 &8077019371550083102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032685169228699604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd7a05bd72976b4ab558ef1f91bda3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  immuneObjects: []
+  collidedObjects: []
   _contactFilter:
     useTriggers: 0
     useLayerMask: 0
@@ -110,6 +124,11 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  _immuneLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  _protectFromSpawnContact: 0
+  _maxSpawnContact: 0
 --- !u!1 &5752527867373821658
 GameObject:
   m_ObjectHideFlags: 0
